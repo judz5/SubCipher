@@ -1,3 +1,5 @@
+
+
 public class Substitution {
 
 
@@ -13,8 +15,10 @@ public class Substitution {
 
         String[] keyAlphabet = new String[key.length()];
         for(int i = 0; i<key.length(); i++){
-            keyAlphabet[i] = 
+            keyAlphabet[i] = String.valueOf(key.charAt(i));
         }
+
+        for(int i = 0;)
 
         return encrypted;
     }
