@@ -7,8 +7,8 @@ public class Substitution {
         String plainText = pt.toUpperCase();
         String key = k.toUpperCase();
 
-        if(key.length() != 26){
-            return "Alphabet Key must be 26 Characters!";
+       if(key.length() != 26){
+            return "Key must be 26 Characters! Yours is : " + key.length();
         }
 
         String[] keyAlphabet = new String[key.length()];
@@ -34,6 +34,11 @@ public class Substitution {
         String decrypted = "";
         String cipherText = ct.toUpperCase();
         String key = k.toUpperCase();
+
+        if(key.length() != 26){
+            return "Key must be 26 Characters! Yours is : " + key.length();
+        }
+
         for(int i = 0; i < cipherText.length(); i++) {
 
             char character = cipherText.charAt(i);

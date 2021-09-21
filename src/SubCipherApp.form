@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="SubCipherApp">
+  <grid id="27dc6" binding="CipherApp" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="12" width="824" height="408"/>
+    </constraints>
+    <properties>
+      <background color="-4607044"/>
+      <enabled value="false"/>
+      <foreground color="-13158602"/>
+      <opaque value="true"/>
+      <preferredSize width="700" height="200"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="ae93d" class="javax.swing.JTextField" binding="text">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0" ipadx="200"/>
+        </constraints>
+        <properties>
+          <preferredSize width="49" height="30"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="d4ca9" class="javax.swing.JTextField" binding="key">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0" ipadx="200"/>
+        </constraints>
+        <properties>
+          <preferredSize width="49" height="30"/>
+        </properties>
+      </component>
+      <component id="ffc67" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-14145497"/>
+          <horizontalAlignment value="0"/>
+          <opaque value="false"/>
+          <preferredSize width="22" height="25"/>
+          <text value="Text"/>
+        </properties>
+      </component>
+      <component id="588be" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-14145497"/>
+          <horizontalAlignment value="0"/>
+          <opaque value="false"/>
+          <preferredSize width="22" height="25"/>
+          <text value="Key (26 Characters)"/>
+        </properties>
+      </component>
+      <component id="cf3e9" class="javax.swing.JButton" binding="encrypt">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0" ipady="50"/>
+        </constraints>
+        <properties>
+          <foreground color="-13158601"/>
+          <preferredSize width="350" height="75"/>
+          <text value="Encrypt"/>
+        </properties>
+      </component>
+      <component id="2bf98" class="javax.swing.JButton" binding="decrypt">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0" ipady="50"/>
+        </constraints>
+        <properties>
+          <foreground color="-13158857"/>
+          <preferredSize width="350" height="75"/>
+          <text value="Decrypt"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
