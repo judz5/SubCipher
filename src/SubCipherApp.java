@@ -9,6 +9,7 @@ public class SubCipherApp {
     private JTextField text;
     private JTextField key;
     private JPanel CipherApp;
+    private JButton generateRandomKeyButton;
 
 
     public SubCipherApp() {
@@ -22,6 +23,13 @@ public class SubCipherApp {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null, Substitution.decrypt(text.getText(), key.getText()));
+            }
+        });
+        generateRandomKeyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Add generate Random key
+                key.setText(Substitution.generateKey());
             }
         });
     }

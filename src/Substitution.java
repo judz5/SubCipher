@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
+import java.math.*;
 
 public class Substitution {
 
@@ -52,6 +56,21 @@ public class Substitution {
             }
         }
         return decrypted;
+    }
+
+    public static String generateKey(){
+    String input = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    List<Character> characters = new ArrayList<Character>();
+        for(char c:input.toCharArray()){
+            characters.add(c);
+        }
+        StringBuilder output = new StringBuilder(input.length());
+        while(characters.size()!=0){
+            int randPicker = (int)(Math.random()*characters.size());
+            output.append(characters.remove(randPicker));
+        }
+        String s = output.toString();
+        return s;
     }
 
 }
