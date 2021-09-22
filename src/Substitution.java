@@ -8,8 +8,10 @@ public class Substitution {
 
     public static String encrypt(String pt, String k){
         String encrypted = "";
-        String plainText = pt.toUpperCase();
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String key = k.toUpperCase();
+        String plainText = pt.toUpperCase();
+
 
        if(key.length() != 26){
             return "Key must be 26 Characters! Yours is : " + key.length();
@@ -24,7 +26,7 @@ public class Substitution {
         for(int i = 0; i < plainText.length(); i++){
             int index = plainText.charAt(i) - 65; // Subtract 65 cause ascii value offset
 
-            if(index > plainText.length() || index < 0){ // if its a special case then just leave it (were only changing alphabetic characters)
+            if(index > key.length() || index < 0){ // if its a special case then just leave it (were only changing alphabetic characters)
                 encrypted += String.valueOf((plainText.charAt(i)));
             }else{
                 encrypted += keyAlphabet[index];
@@ -50,9 +52,11 @@ public class Substitution {
             int val = index + 65; // + 65 to get ascii value (all upper case duh)
 
             if (val < 65 || val > 90) { // boom special cases again
-                decrypted += String.valueOf(character); // just give the char cause its special case
+                String hold = String.valueOf(character);
+                decrypted += hold; // just give the char cause its special case
             } else {
-                decrypted += String.valueOf((char)val); // give the ascii value
+                String holding = String.valueOf((char)val);
+                decrypted += holding; // give the ascii value
             }
         }
         return decrypted;

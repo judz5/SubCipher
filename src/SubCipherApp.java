@@ -16,13 +16,29 @@ public class SubCipherApp {
         encrypt.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, Substitution.encrypt(text.getText(), key.getText()));
+                JTextArea ja = new JTextArea(10, 10);
+                ja.setText(Substitution.encrypt(text.getText(), key.getText()));
+
+                ja.setWrapStyleWord(true);
+                ja.setLineWrap(true);
+                ja.setCaretPosition(0);
+                ja.setEditable(false);
+
+                JOptionPane.showMessageDialog(null, new JScrollPane(ja));
             }
         });
         decrypt.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, Substitution.decrypt(text.getText(), key.getText()));
+                JTextArea ta = new JTextArea(10, 10);
+                ta.setText(Substitution.decrypt(text.getText(), key.getText()));
+
+                ta.setWrapStyleWord(true);
+                ta.setLineWrap(true);
+                ta.setCaretPosition(0);
+                ta.setEditable(false);
+
+                JOptionPane.showMessageDialog(null, new JScrollPane(ta));
             }
         });
         generateRandomKeyButton.addActionListener(new ActionListener() {
