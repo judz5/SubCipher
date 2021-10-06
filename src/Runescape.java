@@ -17,6 +17,7 @@ public class Runescape {
         }
 
         int key = tot/23;
+        key = key % 26;
 
         StringBuilder text = new StringBuilder();
         for(char Character : plainText.toCharArray()){
@@ -29,7 +30,21 @@ public class Runescape {
                 text.append(Character);
             }
         }
-        return text.toString();
+
+        char[][] matri = new char[text.length()/2][2];
+
+        int index = 0;
+
+        for(int x = 0; x<2 ; x++){
+            for(int y = 0; y<matri.length; y++){
+                matri[y][x] = text.charAt(index);
+                index++;
+            }
+        }
+
+        StringBuilder encrypt = new StringBuilder()
+
+        return Arrays.deepToString(matri);
     }
 
     public static String decrypt(String dt, int tot){
@@ -43,12 +58,13 @@ public class Runescape {
         }
 
         int key = tot/23;
+        key = key % 26;
 
         StringBuilder text = new StringBuilder();
         for(char Character : plainText.toCharArray()){
             if(Character != ' '){
                 int ogPos = Character - 'a';
-                int newPos = (ogPos - key) % 26;
+                int newPos = (ogPos - key)%26;
                 char newChar = (char)('a' + newPos);
                 text.append(newChar);
             }else{
@@ -56,6 +72,7 @@ public class Runescape {
             }
         }
         return text.toString();
+        }
     }
 
-}
+
