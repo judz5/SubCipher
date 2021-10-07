@@ -103,7 +103,7 @@ public class Runescape {
 
         StringBuilder text = new StringBuilder();
         for(char Character : sorted.toCharArray()){
-            if(Character != ' '){
+            if(Character != ' ' && Character != 0){
                 int ogPos = Character - 'a';
                 int newPos = (ogPos - key)%26;
                 if(newPos + 'a' < 97){
